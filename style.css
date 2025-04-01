@@ -16,6 +16,7 @@
      --topaz:#26C2AE;
      --beetle-green:#547878;   
      --regent-grey:#7F9D9F;
+        --water-leaf: #9FE8DF;
     }
  
  body{
@@ -65,8 +66,8 @@
 }
 strong {
     color: var(--greyish-turquoise);
-}
-
+  }
+  
 .input-box{
     margin-top: .6rem;
     background: var(--squeeze);
@@ -89,14 +90,10 @@ strong {
         color: var(--sherpa-blue);
         opacity: 0.35;
      }
-
-  }
+       }
 }
-
-
 .input-box:has(input:focus){
  outline: 2px solid var(--topaz);
-
 }
 
 .tip{
@@ -107,10 +104,10 @@ strong {
      gap: 1.6rem;
 
     button{
-         font-size: 2.4rem;
-         color: var(--white);
-         background: var(--sherpa-blue);
-         border: none;
+           font-size: 2.4rem;
+           color: var(--white);
+               background: var(--sherpa-blue);
+           border: none;
          padding-block: .6rem;
          font-weight: 700;
          border-radius: .5rem;
@@ -133,14 +130,13 @@ strong {
             color: var(--beetle-green);
             opacity: 0.;
         }
-
         strong{
             color: var(--greyish-turquoise)
         }
         &:focus {
             outline: 2px solid var(--topaz);
         }
-     }
+        }
         } 
     }
      .results{
@@ -154,11 +150,9 @@ strong {
             justify-content: space-between;
             align-items: center;
             margin-bottom: 2.4rem;
-    
             p{
                 color: var(--white);
                 font-weight: 700;
-    
                 span{
                     color: var(--regent-grey);
                     font-size: 1.3rem;
@@ -181,5 +175,63 @@ strong {
           border-radius: .5rem;
           font-weight: 700;
           padding-block: .9rem;
+       }
+     }
+
+ 
+@media(min-width: 920px) {
+    main{
+        display: flex;
+        max-width: 92rem;
+        margin-inline: auto;
+        border-radius: 2.5rem;
+        gap: 4.8rem;
+        padding: 4.8rem;
+    }
+    
+    section{
+        width: 100%;
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+        display:none;
+
+    }
+
+    .info{
+        .tip{
+            div{
+                grid-template-columns: repeat(3,1fr);
+
+                button:hover {
+                  background: var(--regent-grey);
+                  cursor: pointer;
+                  transition: .4s;
+                }
+            }
         }
     }
+
+    .results{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 5.6rem 4rem 4rem;
+
+        .amount,
+        .total {
+            strong {
+                font-size: 4.8rem;
+
+
+            }
+        }
+       
+        button :hover{
+                background: var(--water-leaf);
+                transition: .5s;
+                cursor: pointer;
+         }
+     }
+ }
