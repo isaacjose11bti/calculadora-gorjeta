@@ -67,11 +67,10 @@
 strong {
     color: var(--greyish-turquoise);
   }
-  
 .input-box{
     margin-top: .6rem;
     background: var(--squeeze);
-    padding: .6rem 1.8rem;
+ padding: .6rem 1.8rem;
     display: flex;
     align-items: center;
     border-radius: .5rem;
@@ -79,7 +78,7 @@ strong {
     input {
      border: none;
      background: transparent;
-     text-align: right;
+text-align: right;
      width: 100%;
      outline: none;
      font-size: 2.4rem;
@@ -95,7 +94,6 @@ strong {
 .input-box:has(input:focus){
  outline: 2px solid var(--topaz);
 }
-
 .tip{
   div{
      margin-top: 1.6rem;
@@ -167,7 +165,6 @@ strong {
                 color: var(--topaz);
             }
         }
-    
         button{
           background: var(--topaz);
           color: var(--sherpa-blue);
@@ -180,7 +177,11 @@ strong {
           padding-block: .9rem;
        }
      }
-
+     input::-webkit-inner-spin-button,
+     input::-webkit-outer-spin-button {
+         display:none;
+     
+     }
  
 @media(min-width: 920px) {
     main{
@@ -191,26 +192,18 @@ strong {
         gap: 4.8rem;
         padding: 4.8rem;
     }
-    
     section{
         width: 100%;
     }
-
-    input::-webkit-inner-spin-button,
-    input::-webkit-outer-spin-button {
-        display:none;
-
-    }
-
     .info{
         .tip{
             div{
-                grid-template-columns: repeat(3,1fr);
+         grid-template-columns: repeat(3,1fr);
 
-                button:hover {
+         button:hover {
                   background: var(--regent-grey);
-                  cursor: pointer;
-                  transition: .4s;
+       cursor: pointer;
+             transition: .4s;
                 }
             }
         }
@@ -226,15 +219,12 @@ strong {
         .total {
             strong {
                 font-size: 4.8rem;
-
-
             }
         }
-       
         button :hover{
-                background: var(--water-leaf);
-                transition: .5s;
-                cursor: pointer;
+         background: var(--water-leaf);
+       transition: .5s;
+        cursor: pointer;
          }
      }
  }
