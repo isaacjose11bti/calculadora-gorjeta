@@ -14,7 +14,9 @@
      --squeeze: #F3F9FA;
      --sherpa-blue: #00474B;
      --topaz:#26C2AE;
-     --beetle-green:#547878;        }
+     --beetle-green:#547878;   
+     --regent-grey:#7F9D9F;
+    }
  
  body{
      font-size: 1.6rem;
@@ -138,6 +140,46 @@ strong {
         &:focus {
             outline: 2px solid var(--topaz);
         }
-    }
-     } 
      }
+        } 
+    }
+     .results{
+        background: var(--sherpa-blue);
+        border-radius: 1.5rem;
+        padding: 4rem 2.4rem 2.4rem;
+    
+        .amount,
+        .total{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2.4rem;
+    
+            p{
+                color: var(--white);
+                font-weight: 700;
+    
+                span{
+                    color: var(--regent-grey);
+                    font-size: 1.3rem;
+                }
+            }
+    
+            strong{
+                font-size: 3.2rem;
+                color: var(--topaz);
+            }
+        }
+    
+        button{
+          background: var(--topaz);
+          color: var(--sherpa-blue);
+          font-size: 2rem;
+          text-transform: uppercase;
+          width: 100%;
+          border: none;
+          border-radius: .5rem;
+          font-weight: 700;
+          padding-block: .9rem;
+        }
+    }
